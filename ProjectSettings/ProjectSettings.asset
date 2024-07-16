@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: SummerProject
   productName: PauseARApp
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -941,7 +941,7 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 0
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 42ee0b18-de00-4cdd-b99c-670d6d12d822
   framebufferDepthMemorylessMode: 0
