@@ -23,7 +23,7 @@ public class WalkSelect : MonoBehaviour
     void OnStartButtonClick()
     {
         // Load the Walk mode scene
-        SceneManager.LoadScene("ForestWalk");
+        SceneManager.LoadScene("ForestRoute");
     }
 
     void OnBackButtonClick()
