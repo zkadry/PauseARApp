@@ -15,15 +15,10 @@ public class BreathingActivityManager : MonoBehaviour
     private float timer = 0f; // timer to track current phase of the cycle
     private bool isCountdownComplete = false; // check if countdown is complete
 
-    private PauseManager pauseManager; // refrence to PauseManager script
-
     void Start()
     {
         // initialize sphere size
         breathingSphere.transform.localScale = new Vector3(minSize, minSize, minSize);
-
-        // get refrence to PauseManager script
-        pauseManager = FindObjectOfType<PauseManager>();
 
         // start countdown when the scene loads
         StartCoroutine(StartCountdown());
@@ -64,13 +59,6 @@ public class BreathingActivityManager : MonoBehaviour
         if (!isCountdownComplete)
         {
             // if countdown not complete, don't update breathing prompts or animate sphere
-            return;
-        }
-
-        // check if paused
-        if (pauseManager != null && pauseManager.IsPaused())
-        {
-            // pause breathing activity animations and updates
             return;
         }
 
