@@ -83,7 +83,7 @@ public class BreathingActivityManager : MonoBehaviour
         // animate sphere based on current phase
         AnimateBreathingSphere(t);
 
-                currentTime += Time.deltaTime;
+        currentTime += Time.deltaTime;
 
         // calculate remaining time
         float remainingTime = Mathf.Max(gameDuration - currentTime, 0);

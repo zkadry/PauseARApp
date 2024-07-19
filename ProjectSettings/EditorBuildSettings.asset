@@ -19,7 +19,13 @@ EditorBuildSettings:
     guid: 90de342156d4d4870aeda5a90f690b02
   - enabled: 1
     path: Assets/PauseARApp/Scenes/ActivitySelect.unity
+    guid: 90e00b7769f58429f8bcc49aa634807f
+  - enabled: 1
+    path: Assets/PauseARApp/Scenes/BreatheSelect.unity
     guid: 9f8ab79b5f0bb4b908e40112cbf86c64
+  - enabled: 1
+    path: Assets/PauseARApp/Scenes/BubbleSelect.unity
+    guid: b57afdd4611af43bf8df7dd53e72aafd
   - enabled: 1
     path: Assets/PauseARApp/Scenes/AnywhereSelect.unity
     guid: 7bfa7c558fb4c4b39a80c8d3f8aedf2d
@@ -32,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PauseARApp/Scenes/BreatheActivity.unity
     guid: fccac81d3cd6947d6ab62e512f92c498
+  - enabled: 1
+    path: Assets/PauseARApp/Scenes/BubbleActivity.unity
+    guid: ee09c9da243ff4cc2b1855bc78d7fe21
   m_configObjects:
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: f457c76f954ee49cface3af91ef0b376, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 0693eb6f87b0b459887291201642ca8e, type: 2}

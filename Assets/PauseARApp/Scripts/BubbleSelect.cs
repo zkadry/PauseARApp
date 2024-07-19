@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class BreatheSelect : MonoBehaviour
+public class BubbleSelect : MonoBehaviour
 {
     public Button startButton;
     public Button backButton;
@@ -22,7 +22,7 @@ public class BreatheSelect : MonoBehaviour
     void OnStartButtonClick()
     {
         // Load the Walk mode scene
-        SceneManager.LoadScene("BreatheActivity");
+        SceneManager.LoadScene("BubbleActivity");
     }
 
     void OnBackButtonClick()
@@ -30,5 +30,4 @@ public class BreatheSelect : MonoBehaviour
         // Load the Experience Select scene
         SceneManager.LoadScene("ActivitySelect");
     }
-
 }

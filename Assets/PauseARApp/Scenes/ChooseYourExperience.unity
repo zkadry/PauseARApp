@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 34947244}
   - component: {fileID: 34947243}
   m_Layer: 5
-  m_Name: BreatheButton
+  m_Name: BreakButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ef143a80d1ce04a2ea4bd24e0670a46c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9560346fab0ef46329831876e36626ce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
