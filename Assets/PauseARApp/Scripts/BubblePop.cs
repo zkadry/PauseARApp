@@ -8,8 +8,11 @@ public class BubblePop : MonoBehaviour
 
     void OnMouseDown()
     {
+
         // play pop effect
-        Instantiate(popEffect, transform.position, Quaternion.identity);
+        var effect = Instantiate(popEffect, transform.position, Quaternion.identity);
+        effect.Play();
+
 
         // destroy bubble
         Destroy(gameObject);
