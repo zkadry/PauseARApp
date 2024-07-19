@@ -7,6 +7,7 @@ using TMPro;
 public class BubbleSpawner : MonoBehaviour
 {
     public GameObject bubblePrefab;
+    public GameObject donePopupPanel;
     public float spawnInterval = 2f; // time between spawns
     public Vector3 spawnAreaSize = new Vector3(10, 10, 10); // size of bubble spawn area
 
@@ -15,9 +16,37 @@ public class BubbleSpawner : MonoBehaviour
 
     public float currentTime = 0f;
 
+    public TMP_Text countdownText;
+    public float coundownDuration = 3f;
+
+    private bool isCountdownComplete = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        // start countdown when scene loads
+        StartCoroutine(StartCountdown());
+    }
+
+    IEnumerator StartCountdown()
+    {
+        float countdownTime = coundownDuration;
+
+        while (countdownTime > 0)
+        {
+            countdownText.text = Mathf.Ceil(countdownTime).ToString();
+            yield return new WaitForSeconds(1); // wait for one second
+            countdownTime--;
+        }
+
+        // "POP!" text after countdown completes
+        countdownText.text = "POP!";
+
+        // clear UI 
+        countdownText.text = "";
+        isCountdownComplete = true;
+
+        // after countdown, start bubble spawning
         StartCoroutine(SpawnBubbles());
     }
 
@@ -39,6 +68,11 @@ public class BubbleSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isCountdownComplete)
+        {
+            return; // don't start timer if countdown is not complete
+        }
+
         currentTime += Time.deltaTime;
 
         // calculate remaining time
@@ -55,6 +89,9 @@ public class BubbleSpawner : MonoBehaviour
         if (currentTime >= gameDuration)
         {
             StopCoroutine(SpawnBubbles());
+
+            // end popup
+            donePopupPanel.SetActive(true);
         }   
     }
 }

@@ -9,11 +9,17 @@ public class BreathingActivityManager : MonoBehaviour
     public TMP_Text promptText; // breathing prompts UI
     public GameObject breathingSphere; // reference to sphere
     public TMP_Text countdownText; // UI countdown
+    public GameObject donePopupPanel;
     public float minSize = 2f; // min size of sphere
     public float maxSize = 5f; // max size of sphere
     public float cycleDuration = 16.0f; // duration of one breathing cycle
     private float timer = 0f; // timer to track current phase of the cycle
     private bool isCountdownComplete = false; // check if countdown is complete
+
+    public TMP_Text timerText;
+    public float gameDuration = 180f;
+
+    public float currentTime = 0f;
 
     void Start()
     {
@@ -62,6 +68,7 @@ public class BreathingActivityManager : MonoBehaviour
             return;
         }
 
+        // cycle timer
         timer += Time.deltaTime; // increment timer by the time since last frame
         if (timer >= cycleDuration)
         {
@@ -75,6 +82,25 @@ public class BreathingActivityManager : MonoBehaviour
 
         // animate sphere based on current phase
         AnimateBreathingSphere(t);
+
+                currentTime += Time.deltaTime;
+
+        // calculate remaining time
+        float remainingTime = Mathf.Max(gameDuration - currentTime, 0);
+
+        // convert to minutes and seconds
+        int minutes = Mathf.FloorToInt(remainingTime / 60);
+        int seconds = Mathf.FloorToInt(remainingTime % 60);
+
+        // timer display as MM:SS
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+        // stop when timer ends
+        if (currentTime >= gameDuration)
+        {
+            // end popup
+            donePopupPanel.SetActive(true);
+        }
     }
 
     void UpdateBreathingPrompt(float t)
