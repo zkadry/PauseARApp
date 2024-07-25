@@ -20,7 +20,7 @@ MonoBehaviour:
       Altitude: 0
       AltitudeMode: 0
       Label: 
-    IsStep: 0
+    IsStep: 1
     Name: 
     Instruction: 
   - Location:
@@ -29,7 +29,16 @@ MonoBehaviour:
       Altitude: 0
       AltitudeMode: 0
       Label: 
-    IsStep: 0
+    IsStep: 1
+    Name: 
+    Instruction: 
+  - Location:
+      Latitude: 0
+      Longitude: 0
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 1
     Name: 
     Instruction: 
   SceneViewScale: 1
