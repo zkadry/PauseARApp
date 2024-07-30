@@ -20,12 +20,21 @@ public class BubbleSpawner : MonoBehaviour
     public float coundownDuration = 3f;
 
     private bool isCountdownComplete = false;
+    private Coroutine spawnCoroutine;
+    private Coroutine countdownCoroutine;
 
     // Start is called before the first frame update
     void Start()
     {
-        // start countdown when scene loads
-        StartCoroutine(StartCountdown());
+        StartActivity();
+    }
+
+    public void StartActivity()
+    {
+        currentTime = 0f;
+        isCountdownComplete = false;
+        donePopupPanel.SetActive(false);
+        countdownCoroutine = StartCoroutine(StartCountdown());
     }
 
     IEnumerator StartCountdown()
@@ -39,15 +48,12 @@ public class BubbleSpawner : MonoBehaviour
             countdownTime--;
         }
 
-        // "POP!" text after countdown completes
-        countdownText.text = "POP!";
-
         // clear UI 
         countdownText.text = "";
         isCountdownComplete = true;
 
         // after countdown, start bubble spawning
-        StartCoroutine(SpawnBubbles());
+        spawnCoroutine = StartCoroutine(SpawnBubbles());
     }
 
     IEnumerator SpawnBubbles()
@@ -88,10 +94,37 @@ public class BubbleSpawner : MonoBehaviour
         // stop when timer ends
         if (currentTime >= gameDuration)
         {
-            StopCoroutine(SpawnBubbles());
+            if (spawnCoroutine != null)
+            {
+                StopCoroutine(spawnCoroutine);
+            }
 
             // end popup
             donePopupPanel.SetActive(true);
         }   
+    }
+
+    public void ResetActivity()
+    {
+        if (countdownCoroutine != null)
+        {
+            StopCoroutine(countdownCoroutine);
+            spawnCoroutine = null;
+        }
+
+        if (spawnCoroutine != null)
+        {
+            StopCoroutine(spawnCoroutine);
+            spawnCoroutine = null;
+        }
+
+        StopAllCoroutines();
+
+        foreach (GameObject bubble in GameObject.FindGameObjectsWithTag("Bubble"))
+        {
+            Destroy(bubble);
+        }
+
+        StartActivity();
     }
 }

@@ -9,6 +9,8 @@ public class PauseManager : MonoBehaviour
 {
     public GameObject PausePanel;
     public Button exitButton;
+    public BubbleSpawner bubbleSpawner;
+    public BreathingActivityManager breathingActivityManager;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,19 @@ public class PauseManager : MonoBehaviour
 
     void OnExitButtonClick()
     {
-        // Load the Experience Select scene
+        Time.timeScale = 1;
+
+        if (bubbleSpawner != null)
+        {
+            bubbleSpawner.ResetActivity();
+        }
+
+        if (breathingActivityManager != null)
+        {
+            breathingActivityManager.ResetActivity();
+        }
+
+        // load the Experience Select scene
         SceneManager.LoadScene("ChooseYourExperience");
     }
 }

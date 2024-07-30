@@ -21,13 +21,25 @@ public class BreathingActivityManager : MonoBehaviour
 
     public float currentTime = 0f;
 
+    private Coroutine countdownCoroutine;
+
     void Start()
+    {
+        StartActivity();
+    }
+
+    public void StartActivity()
     {
         // initialize sphere size
         breathingSphere.transform.localScale = new Vector3(minSize, minSize, minSize);
 
+        currentTime = 0f;
+        timer = 0f;
+        isCountdownComplete = false;
+        donePopupPanel.SetActive(false);
+
         // start countdown when the scene loads
-        StartCoroutine(StartCountdown());
+        countdownCoroutine = StartCoroutine(StartCountdown());
     }
 
     IEnumerator StartCountdown()
@@ -141,5 +153,17 @@ public class BreathingActivityManager : MonoBehaviour
         {
             breathingSphere.transform.localScale = new Vector3(minSize, minSize, minSize);
         }
+    }
+
+    public void ResetActivity()
+    {
+        if (countdownCoroutine != null)
+        {
+            StopCoroutine(countdownCoroutine);
+        }
+
+        StopAllCoroutines();
+
+        StartActivity();
     }
 }
