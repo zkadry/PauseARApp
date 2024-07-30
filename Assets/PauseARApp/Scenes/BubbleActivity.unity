@@ -2049,8 +2049,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubblePrefab: {fileID: 6987996690216617727, guid: fc2a7fc2389b44447adc3bdf0b5fe23e, type: 3}
   donePopupPanel: {fileID: 724338160}
-  spawnInterval: 2
-  spawnAreaSize: {x: 10, y: 10, z: 10}
+  spawnInterval: 0.5
+  spawnAreaSize: {x: 20, y: 20, z: 20}
   timerText: {fileID: 599333018}
   gameDuration: 180
   currentTime: 0
