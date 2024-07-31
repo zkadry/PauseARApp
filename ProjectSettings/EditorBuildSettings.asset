@@ -42,6 +42,7 @@ EditorBuildSettings:
     path: Assets/PauseARApp/Scenes/BubbleActivity.unity
     guid: ee09c9da243ff4cc2b1855bc78d7fe21
   m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 06e0a53a6cad747daa68a42923634226, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: f457c76f954ee49cface3af91ef0b376, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 0693eb6f87b0b459887291201642ca8e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8a5e1a9e561f149d692f565acdd4eccd, type: 2}
