@@ -41,6 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PauseARApp/Scenes/BubbleActivity.unity
     guid: ee09c9da243ff4cc2b1855bc78d7fe21
+  - enabled: 1
+    path: Assets/PauseARApp/Scenes/WalkAnywhere.unity
+    guid: ed403bb7dab5444ea907280393332ed7
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 06e0a53a6cad747daa68a42923634226, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: f457c76f954ee49cface3af91ef0b376, type: 2}
