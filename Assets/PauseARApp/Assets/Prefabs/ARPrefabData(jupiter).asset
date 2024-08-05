@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90e2274dd46cf438abf36e66c269ad8d, type: 3}
-  m_Name: ARPrefabData(planet)
+  m_Name: ARPrefabData(jupiter)
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1198623719955702456, guid: 49fa6b526b8a248b6928a4d0a1d6eb50, type: 3}
-  count: 50
-  spawnInterval: 3
+  prefab: {fileID: 1198623719955702456, guid: 5aebdec068e2a40c0a273077f3ba2a11, type: 3}
+  count: 2
+  spawnInterval: 1000

@@ -1,25 +1,44 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class MoveObjects : MonoBehaviour, IPointerClickHandler
+public class MoveObjects : MonoBehaviour
 {
-    private Rigidbody rb;
+    public float moveDistance = 1f; // How far the object will move
+    private Vector3 initialPosition;
 
-    private void Start()
+    void Start()
     {
-        // Corrected the typo and made sure to get the Rigidbody component
-        rb = GetComponent<Rigidbody>();
+        // Store the initial position of the object
+        initialPosition = transform.position;
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    void Update()
     {
-        // This method is called when the object is clicked.
-        // Here, you can apply a force or change the velocity as needed.
-        // For example, applying a force:
-        Vector3 forceDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized * 5f;
-        rb.AddForce(forceDirection, ForceMode.VelocityChange);
-        
-        Debug.Log("Object clicked: " + gameObject.name);
+        // Check for touch input
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            // Check if the touch phase is Ended
+            if (touch.phase == TouchPhase.Ended)
+            {
+                // Convert touch position to world position
+                Ray ray = Camera.main.ScreenPointToRay(touch.position);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit))
+                {
+                    // If the ray hits the object
+                    if (hit.transform == transform)
+                    {
+                        // Move the object by moveDistance units
+                        transform.position = initialPosition + new Vector3(moveDistance, 0, 0);
+                        
+                        // Update the initial position to the new position
+                        initialPosition = transform.position;
+                    }
+                }
+            }
+        }
     }
 }
 

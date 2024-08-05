@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6617786446125303908}
   - component: {fileID: -4250084397679333351}
   - component: {fileID: -7688770849787901978}
-  - component: {fileID: 8674779559101040514}
+  - component: {fileID: -5956724300417765204}
   m_Layer: 0
-  m_Name: SkySphere
+  m_Name: Mercury
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 625.54877, y: -205.41956, z: 117.46533}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 491d907010c9f44299301b92979f23de, type: 2}
+  - {fileID: 2100000, guid: 471b1d2a868cd4194aae4f98f6c0aa96, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,7 +134,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8674779559101040514
+--- !u!114 &-5956724300417765204
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1198623719955702456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e219f46fb03942ffba1cb6bd9b3e960, type: 3}
+  m_Script: {fileID: 11500000, guid: 93f6335b985d14af9bc0974a218fe666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 5
+  isOrbiting: 1
+  orbitCenter: {x: 0, y: 0, z: 0}
+  orbitRadius: 10
+  orbitSpeed: 20
+  speed: 0
+  rotationSpeedX: 30
+  rotationSpeedY: 30
+  rotationSpeedZ: 30

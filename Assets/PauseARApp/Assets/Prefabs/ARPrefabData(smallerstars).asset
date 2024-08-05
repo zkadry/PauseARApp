@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90e2274dd46cf438abf36e66c269ad8d, type: 3}
-  m_Name: ARPrefabData(stars)
+  m_Name: ARPrefabData(smallerstars)
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2773975139199645010, guid: 901c1bc10a05143029b0af03d1063f75, type: 3}
-  count: 30
+  prefab: {fileID: 2773975139199645010, guid: 48e2e48b79c1349f78eb9ec0d351ed16, type: 3}
+  count: 100
   spawnInterval: 10000000
