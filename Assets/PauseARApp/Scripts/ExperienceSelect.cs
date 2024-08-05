@@ -8,42 +8,50 @@ using UnityEngine.SceneManagement;
 public class ExperienceSelect : MonoBehaviour
 {
     public Button walkButton;
-    public Button breatheButton;
+    public Button breakButton;
     public Button anywhereButton;
     public Button byoButton;
+    public Button reminderButton;
 
-       // Start is called before the first frame update
+       // Start is called before first frame update
     void Start()
     {
-        // Assign the button click listeners
+        // Assign button click listeners
         walkButton.onClick.AddListener(OnWalkButtonClick);
-        breatheButton.onClick.AddListener(OnBreatheButtonClick);
+        breakButton.onClick.AddListener(OnBreakButtonClick);
         anywhereButton.onClick.AddListener(OnAnywhereButtonClick);
         byoButton.onClick.AddListener(OnBYOButtonClick);
+        reminderButton.onClick.AddListener(OnReminderButtonClick);
     }
 
     void OnWalkButtonClick()
     {
-        // Load the Walk mode description scene
+        // load Walk mode description scene
         SceneManager.LoadScene("WalkSelect");
     }
 
-    void OnBreatheButtonClick()
+    void OnBreakButtonClick()
     {
-        // Load the Breathe mode description scene
+        // load Bre mode description scene
         SceneManager.LoadScene("ActivitySelect");
     }
 
     void OnAnywhereButtonClick()
     {
-        // Load the Anywhere mode description scene
+        // load Anywhere mode description scene
         SceneManager.LoadScene("AnywhereSelect");
     }
 
     void OnBYOButtonClick()
     {
-        // Load the BYO mode description scene
+        // load BYO mode description scene
         SceneManager.LoadScene("BYOSelect");
+    }
+
+    void OnReminderButtonClick()
+    {
+        // load notification reminder scene
+        SceneManager.LoadScene("NotificationTimer");
     }
 }
 
