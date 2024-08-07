@@ -5,14 +5,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class RouteUI : MonoBehaviour
+public class AnywhereRouteUI : MonoBehaviour
 {
     public GameObject exitPopupPanel;
     public Button exitButton;
     public Button yesButton;
     public Button noButton;
-    public GameObject startPopupPanel;
-    public Button startButton;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +22,6 @@ public class RouteUI : MonoBehaviour
         exitButton.onClick.AddListener(ShowExitPopup);
         noButton.onClick.AddListener(HideExitPopup);
         yesButton.onClick.AddListener(OnYesButtonClick);
-        startButton.onClick.AddListener(HideStartPopup);
-        
     }
 
     void ShowExitPopup()
@@ -38,11 +34,6 @@ public class RouteUI : MonoBehaviour
     {
         // hide exit pop-up
         exitPopupPanel.SetActive(false);
-    }
-
-    void HideStartPopup()
-    {
-        startPopupPanel.SetActive(false);
     }
 
     void OnYesButtonClick()

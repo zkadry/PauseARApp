@@ -1779,6 +1779,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PausePanel: {fileID: 1581735727}
   exitButton: {fileID: 744656159}
+  bubbleSpawner: {fileID: 0}
+  breathingActivityManager: {fileID: 0}
 --- !u!1 &1845434380
 GameObject:
   m_ObjectHideFlags: 0

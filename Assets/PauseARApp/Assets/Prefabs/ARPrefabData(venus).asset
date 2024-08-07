@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ARPrefabData(venus)
   m_EditorClassIdentifier: 
   prefab: {fileID: 1198623719955702456, guid: 1cae3746ff71d4f0f8eb4ae7d5b20a95, type: 3}
-  count: 6
+  count: 3
   spawnInterval: 400

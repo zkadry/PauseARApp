@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -11,6 +12,7 @@ public class PauseNotification : MonoBehaviour
     public Button scheduleButton;
     public Button pauseButton;
     public Button playButton;
+    public Button backButton;
     public TMP_Text countdownText;
     private NotificationManager notificationManager;
     private float timeRemaining;
@@ -20,6 +22,8 @@ public class PauseNotification : MonoBehaviour
     void Start()
     {
         notificationManager = FindObjectOfType<NotificationManager>();
+
+        backButton.onClick.AddListener(OnBackButtonClick);
 
         if (scheduleButton != null)
         {
@@ -98,6 +102,12 @@ public class PauseNotification : MonoBehaviour
             UpdateButtonVisibility();
             Debug.Log("Timer resumed.");
         }
+    }
+
+    void OnBackButtonClick()
+    {
+        // Load the Experience Select scene
+        SceneManager.LoadScene("ChooseYourExperience");
     }
 
     void UpdateButtonVisibility()

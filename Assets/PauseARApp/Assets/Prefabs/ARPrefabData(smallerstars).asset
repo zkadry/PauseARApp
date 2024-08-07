@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ARPrefabData(smallerstars)
   m_EditorClassIdentifier: 
   prefab: {fileID: 2773975139199645010, guid: 48e2e48b79c1349f78eb9ec0d351ed16, type: 3}
-  count: 100
+  count: 15
   spawnInterval: 10000000

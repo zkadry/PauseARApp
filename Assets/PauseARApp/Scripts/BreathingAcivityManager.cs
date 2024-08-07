@@ -119,19 +119,19 @@ public class BreathingActivityManager : MonoBehaviour
     {
         if (t < 0.25f)
         {
-            promptText.text = "Breathe In";
+            promptText.text = "breathe in.";
         }
         else if (t >= 0.25f && t < 0.5f)
         {
-            promptText.text = "Hold Breath";
+            promptText.text = "hold breath.";
         }
         else if (t >= 0.5f && t < 0.75f)
         {
-            promptText.text = "Breathe Out";
+            promptText.text = "breathe out.";
         }
         else
         {
-            promptText.text = "Hold Breath";
+            promptText.text = "hold breath.";
         }
     }
 

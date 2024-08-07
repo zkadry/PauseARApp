@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ARPrefabData(jupiter)
   m_EditorClassIdentifier: 
   prefab: {fileID: 1198623719955702456, guid: 5aebdec068e2a40c0a273077f3ba2a11, type: 3}
-  count: 2
+  count: 1
   spawnInterval: 1000

@@ -8,23 +8,32 @@ using UnityEngine.SceneManagement;
 public class WalkSelect : MonoBehaviour
 {
 
-    public Button startButton;
+    public Button breatheButton;
+    public Button bubbleButton;
     public Button backButton;
 
     // Start is called before the first frame update
     void Start()
     {
         // Assign the button click listeners
-        startButton.onClick.AddListener(OnStartButtonClick);
+        breatheButton.onClick.AddListener(OnBreatheButtonClick);
+        bubbleButton.onClick.AddListener(OnBubbleButtonClick);
         backButton.onClick.AddListener(OnBackButtonClick);
         
     }
 
-    void OnStartButtonClick()
+    void OnBubbleButtonClick()
     {
         // Load the Walk mode scene
         // SceneManager.LoadScene("ForestRoute");
-        SceneManager.LoadScene("ForestRoutePop");
+        SceneManager.LoadScene("BubbleWalk");
+    }
+
+    void OnBreatheButtonClick()
+    {
+        // Load the Walk mode scene
+        // SceneManager.LoadScene("ForestRoute");
+        SceneManager.LoadScene("BreathingWalk");
     }
 
     void OnBackButtonClick()

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ARPrefabData(mercury)
   m_EditorClassIdentifier: 
   prefab: {fileID: 1198623719955702456, guid: 755fc0d24385d49a1bb0c1b54bb9ee88, type: 3}
-  count: 10
+  count: 3
   spawnInterval: 300
