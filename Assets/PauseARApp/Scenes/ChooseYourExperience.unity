@@ -364,9 +364,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkButton: {fileID: 1863499871}
-  breatheButton: {fileID: 34947243}
+  breakButton: {fileID: 34947243}
   anywhereButton: {fileID: 1353054758}
   byoButton: {fileID: 1114474972}
+  reminderButton: {fileID: 570370912}
 --- !u!1 &570370910
 GameObject:
   m_ObjectHideFlags: 0

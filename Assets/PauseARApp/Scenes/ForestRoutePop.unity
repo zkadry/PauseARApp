@@ -207,6 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 285952194}
   - component: {fileID: 285952193}
+  - component: {fileID: 285952192}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -214,6 +215,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &285952192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285952191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlanePrefab: {fileID: 0}
+  m_DetectionMode: 1
 --- !u!114 &285952193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,7 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2f3ff7c53dce541b94d22096a83d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefabDatabase: {fileID: 11400000, guid: b6ceddf09d218428dbd49a8b60b97712, type: 2}
+  PrefabDatabase: {fileID: 11400000, guid: 3fad5afafe8f04fd7895c0483a44e6f4, type: 2}
   XmlDataFile: {fileID: 4900000, guid: 49d46b56ac4c941a2b4f565531c0e12d, type: 3}
   DebugMode: 0
 --- !u!4 &552492221

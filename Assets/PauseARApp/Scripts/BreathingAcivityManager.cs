@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using TMPro;
 
 public class BreathingActivityManager : MonoBehaviour
@@ -18,10 +17,10 @@ public class BreathingActivityManager : MonoBehaviour
 
     public TMP_Text timerText;
     public float gameDuration = 180f;
-
     public float currentTime = 0f;
-
     private Coroutine countdownCoroutine;
+
+    public GameObject bubblePrefab; // reference to bubble prefab
 
     void Start()
     {
@@ -52,7 +51,7 @@ public class BreathingActivityManager : MonoBehaviour
             yield return new WaitForSeconds(1); // wait for one second
             count--;
         }
-        
+
         // clear countdown text after countdown completes
         countdownText.text = "";
         isCountdownComplete = true; // countdown is complete
@@ -144,6 +143,10 @@ public class BreathingActivityManager : MonoBehaviour
         else if (t >= 0.5f && t < 0.75f) // exhale
         {
             breathingSphere.transform.localScale = Vector3.Lerp(new Vector3(maxSize, maxSize, maxSize), new Vector3(minSize, minSize, minSize), (t - 0.5f) * 4);
+            if (Random.value < 0.3f) // 30% chance to generate bubbles each frame during exhale
+            {
+                GenerateBubbles();
+            }
         }
         else if (t >= 0.25f && t < 0.5f) // hold after inhale
         {
@@ -152,6 +155,18 @@ public class BreathingActivityManager : MonoBehaviour
         else if (t >= 0.75f) // hold after exhale
         {
             breathingSphere.transform.localScale = new Vector3(minSize, minSize, minSize);
+        }
+    }
+
+    void GenerateBubbles()
+    {
+        int bubbleCount = Random.Range(1, 2); // generate bubbles
+        for (int i = 0; i < bubbleCount; i++)
+        {
+            GameObject bubble = Instantiate(bubblePrefab, breathingSphere.transform.position, Quaternion.identity);
+            BlowingBubbles bubbleScript = bubble.GetComponent<BlowingBubbles>();
+            Vector3 randomDirection = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-0.5f, 1.0f), 1.0f);
+            bubbleScript.Initialize(randomDirection, Random.Range(1.0f, 3.0f));
         }
     }
 
