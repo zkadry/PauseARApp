@@ -121,6 +121,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popEffect: {fileID: 5625297539121129486}
+  popSounds:
+  - {fileID: 8300000, guid: ea585a7758a3e48c89e2321f9564391f, type: 3}
+  - {fileID: 8300000, guid: cb5704ad6737440bfad62db34e8a8a7a, type: 3}
+  - {fileID: 8300000, guid: e0cc9fb8a66924ebba0018f428ff3c52, type: 3}
+  - {fileID: 8300000, guid: 637d1b221cd934e0e8b74876d47e2609, type: 3}
+  - {fileID: 8300000, guid: 3bc6dac3655f04fd6be9125496e630e2, type: 3}
 --- !u!114 &-1200269619666051181
 MonoBehaviour:
   m_ObjectHideFlags: 0

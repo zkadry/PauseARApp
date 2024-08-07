@@ -20,7 +20,8 @@ public class BreathingActivityManager : MonoBehaviour
     public float currentTime = 0f;
     private Coroutine countdownCoroutine;
 
-    public GameObject bubblePrefab; // reference to bubble prefab
+    public GameObject bubblePrefab;
+    public AudioSource bubbleSoundSource; // refrence to AudioSource
 
     void Start()
     {
@@ -147,6 +148,11 @@ public class BreathingActivityManager : MonoBehaviour
             {
                 GenerateBubbles();
             }
+            if (!bubbleSoundSource.isPlaying) // check if sound is playing
+            {
+                bubbleSoundSource.Play(); // play bubbling sound
+                Debug.Log("Playing bubble sound...");
+            }
         }
         else if (t >= 0.25f && t < 0.5f) // hold after inhale
         {
@@ -155,6 +161,11 @@ public class BreathingActivityManager : MonoBehaviour
         else if (t >= 0.75f) // hold after exhale
         {
             breathingSphere.transform.localScale = new Vector3(minSize, minSize, minSize);
+            if (bubbleSoundSource.isPlaying)
+            {
+                bubbleSoundSource.Stop(); // stop bubbling sound
+                Debug.Log("Stopping bubble sound...");
+            }
         }
     }
 
