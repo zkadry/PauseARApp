@@ -10,8 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d58c52ff9f122a49a289c83a1611436, type: 3}
-  m_Name: PrefabDb
+  m_Name: PrefabDb(bubble)
   m_EditorClassIdentifier: 
   Entries:
   - MeshId: Marker
     Prefab: {fileID: 6987996690216617727, guid: 5a56f799b3e9545a497d459b924645c6, type: 3}
+  - MeshId: BubbleActivity
+    Prefab: {fileID: 6987996690216617727, guid: 424cc6cb8782f4157a41f224d1de7a1c, type: 3}
+  - MeshId: EndOfRoute
+    Prefab: {fileID: 1998928891958492975, guid: 3941b069d07474bf1967064163d55b53, type: 3}
