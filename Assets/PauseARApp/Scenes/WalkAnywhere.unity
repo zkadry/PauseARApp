@@ -615,6 +615,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a3ca83e72f5b14d44817b00a78bf6bd6, type: 2}
   - {fileID: 11400000, guid: e587b455aee1844569f6d158bdbd4021, type: 2}
   - {fileID: 11400000, guid: 3bcaee6a0de444da08653d96f06ccd01, type: 2}
+  - {fileID: 11400000, guid: 7c5bf1464846144d7a0aaf5ac19bf5d2, type: 2}
   spawnAreaSize: {x: 50, y: 15, z: 50}
 --- !u!4 &338179516
 Transform:

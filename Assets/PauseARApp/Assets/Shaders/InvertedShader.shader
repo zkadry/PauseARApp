@@ -1,4 +1,4 @@
-Shader "Custom/InvertedShader"
+Shader "Custom/NormalShader"
 {
     Properties
     {
@@ -11,7 +11,8 @@ Shader "Custom/InvertedShader"
 
         Pass
         {
-            Cull Front
+            // Removed Cull Front to use default back-face culling
+            Cull Back
 
             CGPROGRAM
             #pragma vertex vert
@@ -42,6 +43,7 @@ Shader "Custom/InvertedShader"
 
             fixed4 frag (v2f i) : SV_Target
             {
+                // Sample the texture and return the color
                 return tex2D(_MainTex, i.uv);
             }
             ENDCG
